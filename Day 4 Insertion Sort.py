@@ -5,7 +5,7 @@ def insertion_sort(elements_list):
         picked = elements_list[i]
         j = i-1
         
-        while j>=0 and picked < elements_list[j]:
+        while j>=0 and picked < elements_list[j]: #use picked > elements_list[j] to sort in Descending Order
             elements_list[j+1] = elements_list[j]
             j = j-1
         
