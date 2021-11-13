@@ -1,14 +1,20 @@
 Binary Search Exercise
 
-    When I try to find number 5 in below list using binary search, it doesn't work and returns me -1 index. Why is that?
+1.When I try to find number 5 in below list using binary search, it doesn't work and returns me -1 index. Why is that?
+numbers = [1,4,6,9,10,5,7]
+    
+Solution --------> It is because the numbers array is not Sorted, whereas the Binary Search requires a Sortes Array.
 
-    numbers = [1,4,6,9,10,5,7]
+2.Find index of all the occurances of a number from sorted list
+numbers = [1,4,6,9,11,15,15,15,17,21,34,34,56]
+number_to_find = 15  
+This should return 5,6,7 as indices containing number 15 in the array
 
-    Find index of all the occurances of a number from sorted list
+Solution --------> 
+    
+numbers = [1,4,6,9,11,15,15,15,17,21,34,34,56]
+number_to_find = int(input("Enter Number to Find"))
 
-    numbers = [1,4,6,9,11,15,15,15,17,21,34,34,56]
-    number_to_find = 15  
-
-    This should return 5,6,7 as indices containing number 15 in the array
-
-
+for index,element in enumerate(numbers):
+    if element == number_to_find:
+        print(index, end=" ")
