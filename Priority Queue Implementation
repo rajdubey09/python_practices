@@ -1,0 +1,25 @@
+#Priority Queue Implementation
+import queue
+q = queue.PriorityQueue()
+def insertElement():
+    element = int(input("Enter Element to Enter"))
+    q.put(element)
+
+def removeElement():
+    print(q.get())
+
+def display():
+    print(q)
+
+while True:
+    choice = int(input("Select your Choice\n1. Insert Element\n2. Delete Element\n3. Display Queue\n4. Exit"))
+    if choice == 1:
+        insertElement()
+    elif choice == 2:
+        removeElement()
+    elif choice == 3:
+        display()
+    elif choice == 4:
+        break
+    else:
+        print("Invalid Input")
